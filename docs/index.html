@@ -7,18 +7,17 @@
     <title>Document</title>
 <body>
     <div class="div" id="envio">
-    <iframe width="1083" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZDIyM2VhMzMtYWVmYS00ODNjLWJiZGItYjUyZmFjYWVjNjRiIiwidCI6Ijg5ODA1OTQ2LTEzN2UtNDhjOS1hYzE1LWQ2NDM0YTE5ODkyNiJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+    <iframe id="TableroPowerBi" width="1100" height="568" src="https://app.powerbi.com/view?r=eyJrIjoiZDIyM2VhMzMtYWVmYS00ODNjLWJiZGItYjUyZmFjYWVjNjRiIiwidCI6Ijg5ODA1OTQ2LTEzN2UtNDhjOS1hYzE1LWQ2NDM0YTE5ODkyNiJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
     </div>
     <script type="text/javascript" src="api.js"></script>
     <script>
-        const Boton=document.getElementById("innerMenuToggle");
-        if(boton !=null){
-        boton.eventListener("click",()=>{
-         console.log(boton)
-         alert("Mala suerte")
+        const Menu=document.getElementById("menuId");
+        const TableroPowerBi=document.getElementById("TableroPowerBi")
+        Menu.addEventListener("click",()=>{
+          if(Menu.className !="westPane menuClass menuClass--updated animated"){       
+           TableroPowerBi.width="1315" 
+          }
         })
-     
-}
     </script>
     <script src="../App.js"></script>
 </body>
