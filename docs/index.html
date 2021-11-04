@@ -6,8 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <body>
+    <style>
+        .tamaNormal{
+            width: 1100px !important;
+            height: 568px !important;
+        }
+
+        .tamaEvento{
+            width: 1315px;
+            height: 568px; 
+        }
+
+        @media screen and (min-width:1440px) {
+            .tamaNormal{
+                width: 1800px !important;
+                height: 700px !important;
+            }
+        }
+        @media screen and(min-width:2560px){
+            
+        }
+
+    </style>
     <div class="div" id="envio">
-    <iframe id="TableroPowerBi" width="1100" height="568" src="https://app.powerbi.com/view?r=eyJrIjoiZDIyM2VhMzMtYWVmYS00ODNjLWJiZGItYjUyZmFjYWVjNjRiIiwidCI6Ijg5ODA1OTQ2LTEzN2UtNDhjOS1hYzE1LWQ2NDM0YTE5ODkyNiJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+    <iframe id="TableroPowerBi" class="tamaNormal" src="https://app.powerbi.com/view?r=eyJrIjoiZDIyM2VhMzMtYWVmYS00ODNjLWJiZGItYjUyZmFjYWVjNjRiIiwidCI6Ijg5ODA1OTQ2LTEzN2UtNDhjOS1hYzE1LWQ2NDM0YTE5ODkyNiJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
     </div>
     <script type="text/javascript" src="api.js"></script>
     <script>
@@ -15,7 +37,7 @@
         const TableroPowerBi=document.getElementById("TableroPowerBi")
         Menu.addEventListener("click",()=>{
           if(Menu.className !="westPane menuClass menuClass--updated animated"){       
-           TableroPowerBi.width="1315" 
+           TableroPowerBi.className="tamaEvento"
           }
         })
     </script>
